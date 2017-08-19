@@ -2,17 +2,13 @@ package query;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.Date;
+import java.text.NumberFormat;
 
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.Statement;
 import org.eclipse.rdf4j.model.vocabulary.FOAF;
-import org.eclipse.rdf4j.query.BindingSet;
 import org.eclipse.rdf4j.query.QueryLanguage;
 import org.eclipse.rdf4j.query.QueryResults;
-import org.eclipse.rdf4j.query.TupleQuery;
-import org.eclipse.rdf4j.query.TupleQueryResult;
-import org.eclipse.rdf4j.repository.Repository;
 import org.eclipse.rdf4j.repository.RepositoryConnection;
 import org.eclipse.rdf4j.repository.RepositoryResult;
 import org.eclipse.rdf4j.rio.RDFFormat;
@@ -21,9 +17,24 @@ import org.eclipse.rdf4j.rio.RDFParseException;
 import org.eclipse.rdf4j.rio.RDFParser;
 import org.eclipse.rdf4j.rio.Rio;
 
+/**
+ * Ist für die Abfrage der Datensätze zuständig.
+ * 
+ * @author Alexander Fischer
+ *
+ */
 public class Select {
 
-	public static Model selectAll(RepositoryConnection conn, String namespace) {
+	/**
+	 * Fragt alle Datensätze, die zuvor in das Repository eingefügt worden sind ab und gibt diese für
+	 * das Schreiben in die Datei zurück.
+	 * 
+	 * @param conn			Verbindung zum Repository
+	 * @param namespace		Namespace für IRIs
+	 * @return				alle abgefragten Datensätze in Form eines Models
+	 * 
+	 */
+	public static Model selectAllValueFactory4Write(RepositoryConnection conn, String namespace) {
 
 		RepositoryResult<Statement> statement = conn.getStatements(null, null, null);
 		Model model = QueryResults.asModel(statement);
@@ -32,115 +43,59 @@ public class Select {
 		model.setNamespace("", namespace);
 		model.setNamespace("foaf", FOAF.NAMESPACE);
 
-		// System.out.println("Ausgabe beginnt\n");
-		// System.out.println("-----------------------------------");
-		// Ausgabe
-		// Rio.write(model, System.out, RDFFormat.TURTLE);
-
-		// conn.close();
-		// System.out.println("-----------------------------------");
-		// System.out.println("\nAusgabe beendet\n");
-
 		return model;
 	}
-
-	public static void selectAllSPARQL(Repository repo, RepositoryConnection conn, int x) throws IOException {
-		long begin = new Date().getTime();
-
-		// System.out.println(begin);
+	
+	/**
+	 * Liest alle Datensätze aus der zuvor erstellten Datei aus.
+	 * 
+	 * @param conn						Verbindung zum Repository
+	 * @param x							Anzahl der Datensätze
+	 * @throws IOException
+	 * @throws InterruptedException
+	 * 
+	 */
+	public static void selectAllValueFactory( RepositoryConnection conn, int x) throws IOException, InterruptedException {
+		
 		String data = System.getProperty("user.dir") + "\\data\\data" + x + ".ttl";
 		FileInputStream input = new FileInputStream(data);
 		RDFParser parser = Rio.createParser(RDFFormat.TURTLE);
 
 		try {
+			
 			parser.parse(input, data);
-			// String qry = "PREFIX foaf: <http://xmlns.com/foaf/0.1/>" +
-			// "SELECT ?name (COUNT(?friend) AS ?count) " +
-			// "WHERE { ?x foaf:name ?name ." +
-			// " ?x foaf:knows ?friend ." +
-			// "} GROUP BY ?person ?name";
 
 			String qry = "prefix foaf: <http://xmlns.com/foaf/0.1/> \n"
-					+ "SELECT ?person ?name ?email ?knows ?firstName \n" + "WHERE { ?person foaf:name ?name . \n"
-					+ "  	     OPTIONAL { ?person foaf:mbox ?email . } \n "
-					+ "		 OPTIONAL { ?person foaf:knows ?knows . } \n "
-					+ "		 OPTIONAL { ?person foaf:firstName ?firstName } \n" + "     }";
+					+ "SELECT ?person ?name ?email ?knows \n" + "WHERE { ?person foaf:name ?name . \n"
+					+ "OPTIONAL { ?person foaf:mbox ?email . } \n "
+					+ "OPTIONAL { ?person foaf:knows ?knows . } } ";
+			
+			double timeStartNano = System.nanoTime();
+			
+			conn.prepareTupleQuery(QueryLanguage.SPARQL, qry).evaluate();
+			
+			double timeEndNano = System.nanoTime();
+			double NanoInMS = (timeEndNano - timeStartNano) / 1000000;
+			 
+			NumberFormat n = NumberFormat.getInstance();
+			n.setMaximumFractionDigits(2);
+	 
+			String NanoInMSRound = n.format(NanoInMS);
+			System.out.println("Lesedauer:\t|" + NanoInMSRound + " ms");
+			System.out.println("____________________________________\n");
+			
 
-			// System.out.println("Abfrage:");
-			// System.out.println(qry + "\n");
-
-			TupleQuery tq = conn.prepareTupleQuery(QueryLanguage.SPARQL, qry);
-			TupleQueryResult results = tq.evaluate();
-
-			// System.out.println("Ausgabe:");
-			// System.out.println("\tIRI\t\t\t\tName\t\tE-Mail\t\t\t\tkennt");
-
-			int row = 1;
-
-			while (results.hasNext()) {
-				BindingSet s = results.next();
-
-				String person;
-				String name;
-				String mbox;
-				String knows;
-				String ausgabe;
-
-				if (s.getValue("person") == null) {
-					ausgabe = "\t\t\t\t";
-
-				} else {
-					person = s.getValue("person").stringValue();
-					ausgabe = person + "  \t";
-				}
-
-				if (s.getValue("name") == null) {
-					ausgabe = ausgabe + "\t\t";
-				} else {
-					name = s.getValue("name").stringValue();
-					ausgabe = ausgabe + name + "\t\t";
-				}
-
-				if (s.getValue("email") == null) {
-					ausgabe = ausgabe + "\t\t\t\t";
-				} else {
-					mbox = s.getValue("email").stringValue();
-					ausgabe = ausgabe + mbox + "\t";
-				}
-
-				if (s.getValue("knows") == null) {
-					ausgabe = ausgabe + "\t\t";
-				} else {
-					knows = s.getValue("knows").stringValue();
-					ausgabe = ausgabe + knows + "  \t";
-				}
-
-				// System.out.println(row + "\t" + ausgabe + "\n");
-
-				row = row + 1;
-
-			}
-
-			long end = new Date().getTime();
-			// System.out.println(end);
-
-			long DifTimeMs = end - begin;
-			double DifTimeS = DifTimeMs / 1000.00;
-
-			System.out.println("Abfrage von " + x + " Datensatz/-sätzen \n" + "Dauer: " + DifTimeMs + " ms --> "
-					+ DifTimeS + " s" + "\n");
-
-		} catch (IOException e) {
+		} 
+		catch (IOException e) {
 			System.out.println(e);
 		}
-
 		catch (RDFParseException e) {
 			System.out.println(e);
 		}
-
 		catch (RDFHandlerException e) {
 			System.out.println(e);
-		} finally {
+		} 
+		finally {
 			input.close();
 		}
 	}
