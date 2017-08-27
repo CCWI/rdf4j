@@ -33,7 +33,7 @@ public class MainRDF4J {
 	public static void main(String[] args) throws IOException, InterruptedException {
 
 		/** Aufruf für NativeStore */
-		setupConnectionNative(10);
+//		setupConnectionNative(10);
 //		setupConnectionNative(20);
 //		setupConnectionNative(30);
 //		setupConnectionNative(40);
@@ -45,16 +45,16 @@ public class MainRDF4J {
 //		setupConnectionNative(100);
 		
 		/** Aufruf für MemoryStore */
-//		setupConnectionMemory(10);
-//		setupConnectionMemory(20);
-//		setupConnectionMemory(30);
-//		setupConnectionMemory(40);
-//		setupConnectionMemory(50);
-//		setupConnectionMemory(60);
-//		setupConnectionMemory(70);
-//		setupConnectionMemory(80);
-//		setupConnectionMemory(90);
-//		setupConnectionMemory(100);
+		setupConnectionMemory(10);
+		setupConnectionMemory(20);
+		setupConnectionMemory(30);
+		setupConnectionMemory(40);
+		setupConnectionMemory(50);
+		setupConnectionMemory(60);
+		setupConnectionMemory(70);
+		setupConnectionMemory(80);
+		setupConnectionMemory(90);
+		setupConnectionMemory(100);
 
 	}
 

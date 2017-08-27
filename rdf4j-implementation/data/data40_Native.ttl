@@ -1,0 +1,520 @@
+
+<http://example.org/alice1> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Alice1" ;
+	<http://xmlns.com/foaf/0.1/mbox> "mailto:alice1@example.org" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/bob1> , <http://example.org/snoopy1> .
+
+<http://example.org/bob1> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Bob1" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/charlie1> .
+
+<http://example.org/charlie1> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Charlie1" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/alice1> .
+
+<http://example.org/alice2> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Alice2" ;
+	<http://xmlns.com/foaf/0.1/mbox> "mailto:alice2@example.org" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/bob2> , <http://example.org/snoopy2> .
+
+<http://example.org/bob2> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Bob2" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/charlie2> .
+
+<http://example.org/charlie2> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Charlie2" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/alice2> .
+
+<http://example.org/alice3> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Alice3" ;
+	<http://xmlns.com/foaf/0.1/mbox> "mailto:alice3@example.org" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/bob3> , <http://example.org/snoopy3> .
+
+<http://example.org/bob3> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Bob3" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/charlie3> .
+
+<http://example.org/charlie3> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Charlie3" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/alice3> .
+
+<http://example.org/alice4> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Alice4" ;
+	<http://xmlns.com/foaf/0.1/mbox> "mailto:alice4@example.org" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/bob4> , <http://example.org/snoopy4> .
+
+<http://example.org/bob4> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Bob4" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/charlie4> .
+
+<http://example.org/charlie4> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Charlie4" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/alice4> .
+
+<http://example.org/alice5> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Alice5" ;
+	<http://xmlns.com/foaf/0.1/mbox> "mailto:alice5@example.org" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/bob5> , <http://example.org/snoopy5> .
+
+<http://example.org/bob5> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Bob5" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/charlie5> .
+
+<http://example.org/charlie5> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Charlie5" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/alice5> .
+
+<http://example.org/alice6> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Alice6" ;
+	<http://xmlns.com/foaf/0.1/mbox> "mailto:alice6@example.org" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/bob6> , <http://example.org/snoopy6> .
+
+<http://example.org/bob6> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Bob6" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/charlie6> .
+
+<http://example.org/charlie6> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Charlie6" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/alice6> .
+
+<http://example.org/alice7> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Alice7" ;
+	<http://xmlns.com/foaf/0.1/mbox> "mailto:alice7@example.org" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/bob7> , <http://example.org/snoopy7> .
+
+<http://example.org/bob7> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Bob7" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/charlie7> .
+
+<http://example.org/charlie7> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Charlie7" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/alice7> .
+
+<http://example.org/alice8> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Alice8" ;
+	<http://xmlns.com/foaf/0.1/mbox> "mailto:alice8@example.org" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/bob8> , <http://example.org/snoopy8> .
+
+<http://example.org/bob8> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Bob8" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/charlie8> .
+
+<http://example.org/charlie8> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Charlie8" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/alice8> .
+
+<http://example.org/alice9> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Alice9" ;
+	<http://xmlns.com/foaf/0.1/mbox> "mailto:alice9@example.org" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/bob9> , <http://example.org/snoopy9> .
+
+<http://example.org/bob9> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Bob9" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/charlie9> .
+
+<http://example.org/charlie9> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Charlie9" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/alice9> .
+
+<http://example.org/alice10> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Alice10" ;
+	<http://xmlns.com/foaf/0.1/mbox> "mailto:alice10@example.org" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/bob10> , <http://example.org/snoopy10> .
+
+<http://example.org/bob10> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Bob10" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/charlie10> .
+
+<http://example.org/charlie10> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Charlie10" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/alice10> .
+
+<http://example.org/alice11> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Alice11" ;
+	<http://xmlns.com/foaf/0.1/mbox> "mailto:alice11@example.org" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/bob11> , <http://example.org/snoopy11> .
+
+<http://example.org/bob11> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Bob11" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/charlie11> .
+
+<http://example.org/charlie11> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Charlie11" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/alice11> .
+
+<http://example.org/alice12> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Alice12" ;
+	<http://xmlns.com/foaf/0.1/mbox> "mailto:alice12@example.org" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/bob12> , <http://example.org/snoopy12> .
+
+<http://example.org/bob12> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Bob12" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/charlie12> .
+
+<http://example.org/charlie12> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Charlie12" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/alice12> .
+
+<http://example.org/alice13> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Alice13" ;
+	<http://xmlns.com/foaf/0.1/mbox> "mailto:alice13@example.org" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/bob13> , <http://example.org/snoopy13> .
+
+<http://example.org/bob13> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Bob13" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/charlie13> .
+
+<http://example.org/charlie13> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Charlie13" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/alice13> .
+
+<http://example.org/alice14> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Alice14" ;
+	<http://xmlns.com/foaf/0.1/mbox> "mailto:alice14@example.org" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/bob14> , <http://example.org/snoopy14> .
+
+<http://example.org/bob14> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Bob14" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/charlie14> .
+
+<http://example.org/charlie14> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Charlie14" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/alice14> .
+
+<http://example.org/alice15> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Alice15" ;
+	<http://xmlns.com/foaf/0.1/mbox> "mailto:alice15@example.org" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/bob15> , <http://example.org/snoopy15> .
+
+<http://example.org/bob15> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Bob15" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/charlie15> .
+
+<http://example.org/charlie15> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Charlie15" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/alice15> .
+
+<http://example.org/alice16> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Alice16" ;
+	<http://xmlns.com/foaf/0.1/mbox> "mailto:alice16@example.org" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/bob16> , <http://example.org/snoopy16> .
+
+<http://example.org/bob16> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Bob16" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/charlie16> .
+
+<http://example.org/charlie16> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Charlie16" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/alice16> .
+
+<http://example.org/alice17> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Alice17" ;
+	<http://xmlns.com/foaf/0.1/mbox> "mailto:alice17@example.org" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/bob17> , <http://example.org/snoopy17> .
+
+<http://example.org/bob17> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Bob17" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/charlie17> .
+
+<http://example.org/charlie17> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Charlie17" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/alice17> .
+
+<http://example.org/alice18> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Alice18" ;
+	<http://xmlns.com/foaf/0.1/mbox> "mailto:alice18@example.org" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/bob18> , <http://example.org/snoopy18> .
+
+<http://example.org/bob18> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Bob18" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/charlie18> .
+
+<http://example.org/charlie18> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Charlie18" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/alice18> .
+
+<http://example.org/alice19> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Alice19" ;
+	<http://xmlns.com/foaf/0.1/mbox> "mailto:alice19@example.org" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/bob19> , <http://example.org/snoopy19> .
+
+<http://example.org/bob19> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Bob19" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/charlie19> .
+
+<http://example.org/charlie19> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Charlie19" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/alice19> .
+
+<http://example.org/alice20> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Alice20" ;
+	<http://xmlns.com/foaf/0.1/mbox> "mailto:alice20@example.org" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/bob20> , <http://example.org/snoopy20> .
+
+<http://example.org/bob20> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Bob20" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/charlie20> .
+
+<http://example.org/charlie20> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Charlie20" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/alice20> .
+
+<http://example.org/alice21> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Alice21" ;
+	<http://xmlns.com/foaf/0.1/mbox> "mailto:alice21@example.org" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/bob21> , <http://example.org/snoopy21> .
+
+<http://example.org/bob21> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Bob21" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/charlie21> .
+
+<http://example.org/charlie21> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Charlie21" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/alice21> .
+
+<http://example.org/alice22> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Alice22" ;
+	<http://xmlns.com/foaf/0.1/mbox> "mailto:alice22@example.org" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/bob22> , <http://example.org/snoopy22> .
+
+<http://example.org/bob22> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Bob22" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/charlie22> .
+
+<http://example.org/charlie22> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Charlie22" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/alice22> .
+
+<http://example.org/alice23> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Alice23" ;
+	<http://xmlns.com/foaf/0.1/mbox> "mailto:alice23@example.org" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/bob23> , <http://example.org/snoopy23> .
+
+<http://example.org/bob23> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Bob23" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/charlie23> .
+
+<http://example.org/charlie23> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Charlie23" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/alice23> .
+
+<http://example.org/alice24> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Alice24" ;
+	<http://xmlns.com/foaf/0.1/mbox> "mailto:alice24@example.org" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/bob24> , <http://example.org/snoopy24> .
+
+<http://example.org/bob24> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Bob24" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/charlie24> .
+
+<http://example.org/charlie24> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Charlie24" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/alice24> .
+
+<http://example.org/alice25> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Alice25" ;
+	<http://xmlns.com/foaf/0.1/mbox> "mailto:alice25@example.org" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/bob25> , <http://example.org/snoopy25> .
+
+<http://example.org/bob25> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Bob25" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/charlie25> .
+
+<http://example.org/charlie25> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Charlie25" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/alice25> .
+
+<http://example.org/alice26> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Alice26" ;
+	<http://xmlns.com/foaf/0.1/mbox> "mailto:alice26@example.org" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/bob26> , <http://example.org/snoopy26> .
+
+<http://example.org/bob26> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Bob26" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/charlie26> .
+
+<http://example.org/charlie26> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Charlie26" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/alice26> .
+
+<http://example.org/alice27> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Alice27" ;
+	<http://xmlns.com/foaf/0.1/mbox> "mailto:alice27@example.org" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/bob27> , <http://example.org/snoopy27> .
+
+<http://example.org/bob27> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Bob27" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/charlie27> .
+
+<http://example.org/charlie27> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Charlie27" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/alice27> .
+
+<http://example.org/alice28> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Alice28" ;
+	<http://xmlns.com/foaf/0.1/mbox> "mailto:alice28@example.org" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/bob28> , <http://example.org/snoopy28> .
+
+<http://example.org/bob28> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Bob28" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/charlie28> .
+
+<http://example.org/charlie28> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Charlie28" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/alice28> .
+
+<http://example.org/alice29> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Alice29" ;
+	<http://xmlns.com/foaf/0.1/mbox> "mailto:alice29@example.org" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/bob29> , <http://example.org/snoopy29> .
+
+<http://example.org/bob29> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Bob29" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/charlie29> .
+
+<http://example.org/charlie29> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Charlie29" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/alice29> .
+
+<http://example.org/alice30> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Alice30" ;
+	<http://xmlns.com/foaf/0.1/mbox> "mailto:alice30@example.org" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/bob30> , <http://example.org/snoopy30> .
+
+<http://example.org/bob30> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Bob30" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/charlie30> .
+
+<http://example.org/charlie30> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Charlie30" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/alice30> .
+
+<http://example.org/alice31> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Alice31" ;
+	<http://xmlns.com/foaf/0.1/mbox> "mailto:alice31@example.org" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/bob31> , <http://example.org/snoopy31> .
+
+<http://example.org/bob31> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Bob31" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/charlie31> .
+
+<http://example.org/charlie31> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Charlie31" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/alice31> .
+
+<http://example.org/alice32> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Alice32" ;
+	<http://xmlns.com/foaf/0.1/mbox> "mailto:alice32@example.org" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/bob32> , <http://example.org/snoopy32> .
+
+<http://example.org/bob32> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Bob32" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/charlie32> .
+
+<http://example.org/charlie32> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Charlie32" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/alice32> .
+
+<http://example.org/alice33> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Alice33" ;
+	<http://xmlns.com/foaf/0.1/mbox> "mailto:alice33@example.org" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/bob33> , <http://example.org/snoopy33> .
+
+<http://example.org/bob33> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Bob33" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/charlie33> .
+
+<http://example.org/charlie33> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Charlie33" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/alice33> .
+
+<http://example.org/alice34> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Alice34" ;
+	<http://xmlns.com/foaf/0.1/mbox> "mailto:alice34@example.org" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/bob34> , <http://example.org/snoopy34> .
+
+<http://example.org/bob34> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Bob34" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/charlie34> .
+
+<http://example.org/charlie34> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Charlie34" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/alice34> .
+
+<http://example.org/alice35> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Alice35" ;
+	<http://xmlns.com/foaf/0.1/mbox> "mailto:alice35@example.org" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/bob35> , <http://example.org/snoopy35> .
+
+<http://example.org/bob35> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Bob35" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/charlie35> .
+
+<http://example.org/charlie35> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Charlie35" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/alice35> .
+
+<http://example.org/alice36> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Alice36" ;
+	<http://xmlns.com/foaf/0.1/mbox> "mailto:alice36@example.org" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/bob36> , <http://example.org/snoopy36> .
+
+<http://example.org/bob36> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Bob36" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/charlie36> .
+
+<http://example.org/charlie36> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Charlie36" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/alice36> .
+
+<http://example.org/alice37> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Alice37" ;
+	<http://xmlns.com/foaf/0.1/mbox> "mailto:alice37@example.org" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/bob37> , <http://example.org/snoopy37> .
+
+<http://example.org/bob37> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Bob37" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/charlie37> .
+
+<http://example.org/charlie37> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Charlie37" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/alice37> .
+
+<http://example.org/alice38> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Alice38" ;
+	<http://xmlns.com/foaf/0.1/mbox> "mailto:alice38@example.org" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/bob38> , <http://example.org/snoopy38> .
+
+<http://example.org/bob38> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Bob38" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/charlie38> .
+
+<http://example.org/charlie38> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Charlie38" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/alice38> .
+
+<http://example.org/alice39> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Alice39" ;
+	<http://xmlns.com/foaf/0.1/mbox> "mailto:alice39@example.org" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/bob39> , <http://example.org/snoopy39> .
+
+<http://example.org/bob39> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Bob39" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/charlie39> .
+
+<http://example.org/charlie39> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Charlie39" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/alice39> .
+
+<http://example.org/alice40> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Alice40" ;
+	<http://xmlns.com/foaf/0.1/mbox> "mailto:alice40@example.org" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/bob40> , <http://example.org/snoopy40> .
+
+<http://example.org/bob40> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Bob40" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/charlie40> .
+
+<http://example.org/charlie40> a <http://xmlns.com/foaf/0.1/Person> ;
+	<http://xmlns.com/foaf/0.1/name> "Charlie40" ;
+	<http://xmlns.com/foaf/0.1/knows> <http://example.org/alice40> .
