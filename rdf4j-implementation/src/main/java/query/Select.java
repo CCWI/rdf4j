@@ -2,7 +2,6 @@ package query;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.text.NumberFormat;
 
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.Statement;
@@ -34,7 +33,7 @@ public class Select {
 	 * @return				alle abgefragten Datensätze in Form eines Models
 	 * 
 	 */
-	public static Model selectAllValueFactory4Write(RepositoryConnection conn, String namespace) {
+	public static Model selectAll4Write(RepositoryConnection conn, String namespace) {
 
 		RepositoryResult<Statement> statement = conn.getStatements(null, null, null);
 		Model model = QueryResults.asModel(statement);
@@ -55,9 +54,20 @@ public class Select {
 	 * @throws InterruptedException
 	 * 
 	 */
-	public static void selectAllValueFactory( RepositoryConnection conn, int x) throws IOException, InterruptedException {
+	public static void selectAll( RepositoryConnection conn, int x, int repoType) throws IOException, InterruptedException {
 		
-		String data = System.getProperty("user.dir") + "\\data\\data" + x + ".ttl";
+		String repoName = "";
+		
+		switch (repoType) {
+		case 1: 
+			repoName = "Native";
+			break;
+		case 2: 
+			repoName = "Memory";
+			break;
+		}
+		
+		String data = System.getProperty("user.dir") + "\\data\\data" + x + "_" + repoName + ".ttl";
 		FileInputStream input = new FileInputStream(data);
 		RDFParser parser = Rio.createParser(RDFFormat.TURTLE);
 
@@ -65,30 +75,24 @@ public class Select {
 			
 			parser.parse(input, data);
 
-			String qry = "prefix foaf: <http://xmlns.com/foaf/0.1/> \n"
-					+ "SELECT ?person ?name ?email ?knows \n" + "WHERE { ?person foaf:name ?name . \n"
-					+ "OPTIONAL { ?person foaf:mbox ?email . } \n "
-					+ "OPTIONAL { ?person foaf:knows ?knows . } } ";
-			
+			String qry 	= "prefix foaf: <http://xmlns.com/foaf/0.1/> \n"
+						+ "SELECT ?person ?name ?email ?knows \n" 
+						+ "WHERE { ?person foaf:name ?name . \n"
+						+ "OPTIONAL { ?person foaf:mbox ?email . } \n "
+						+ "OPTIONAL { ?person foaf:knows ?knows . } } ";
+				
 			double timeStartNano = System.nanoTime();
 			
 			conn.prepareTupleQuery(QueryLanguage.SPARQL, qry).evaluate();
 			
 			double timeEndNano = System.nanoTime();
-			double NanoInMS = (timeEndNano - timeStartNano) / 1000000;
-			 
-			NumberFormat n = NumberFormat.getInstance();
-			n.setMaximumFractionDigits(2);
-	 
-			String NanoInMSRound = n.format(NanoInMS);
-			System.out.println("Lesedauer:\t|" + NanoInMSRound + " ms");
-			System.out.println("____________________________________\n");
 			
+			double NanoInMs = (timeEndNano - timeStartNano) / 1000000;
+			double NanoInMsRound = Math.round(NanoInMs*100)/100.0;
+			System.out.println("Lesedauer:\t|" + NanoInMsRound);
+			System.out.println("____________________________________\n");			
 
 		} 
-		catch (IOException e) {
-			System.out.println(e);
-		}
 		catch (RDFParseException e) {
 			System.out.println(e);
 		}

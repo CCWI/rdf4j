@@ -1,5 +1,6 @@
 package main;
 
+import java.io.File;
 import java.io.IOException;
 
 import org.eclipse.rdf4j.model.ValueFactory;
@@ -7,6 +8,7 @@ import org.eclipse.rdf4j.repository.Repository;
 import org.eclipse.rdf4j.repository.RepositoryConnection;
 import org.eclipse.rdf4j.repository.sail.SailRepository;
 import org.eclipse.rdf4j.sail.memory.MemoryStore;
+import org.eclipse.rdf4j.sail.nativerdf.NativeStore;
 
 import query.Insert;
 import query.Select;
@@ -30,36 +32,29 @@ public class MainRDF4J {
 	 */
 	public static void main(String[] args) throws IOException, InterruptedException {
 
-		setupConnection(1);
-		setupConnection(10);
-		setupConnection(100);
-		setupConnection(200);		
-		setupConnection(300);		
-		setupConnection(400);		
-		setupConnection(500);		
-		setupConnection(600);
-		setupConnection(700);
-		setupConnection(800);
-		setupConnection(900);
-		setupConnection(1000);
-		setupConnection(2000);
-		setupConnection(3000);
-		setupConnection(4000);
-		setupConnection(5000);
-		setupConnection(6000);
-		setupConnection(7000);
-		setupConnection(8000);
-		setupConnection(9000);
-		setupConnection(10000);
-		setupConnection(20000);
-		setupConnection(30000);
-		setupConnection(40000);
-		setupConnection(50000);
-		setupConnection(60000);
-		setupConnection(70000);
-		setupConnection(80000);
-		setupConnection(90000);
-		setupConnection(100000);
+		/** Aufruf für NativeStore */
+		setupConnectionNative(10);
+//		setupConnectionNative(20);
+//		setupConnectionNative(30);
+//		setupConnectionNative(40);
+//		setupConnectionNative(50);
+//		setupConnectionNative(60);
+//		setupConnectionNative(70);
+//		setupConnectionNative(80);
+//		setupConnectionNative(90);
+//		setupConnectionNative(100);
+		
+		/** Aufruf für MemoryStore */
+//		setupConnectionMemory(10);
+//		setupConnectionMemory(20);
+//		setupConnectionMemory(30);
+//		setupConnectionMemory(40);
+//		setupConnectionMemory(50);
+//		setupConnectionMemory(60);
+//		setupConnectionMemory(70);
+//		setupConnectionMemory(80);
+//		setupConnectionMemory(90);
+//		setupConnectionMemory(100);
 
 	}
 
@@ -72,26 +67,53 @@ public class MainRDF4J {
 	 * @throws InterruptedException
 	 * 
 	 */
-	public static void setupConnection(int x) throws IOException, InterruptedException {
+	public static void setupConnectionNative(int x) throws IOException, InterruptedException {
 		
-		Repository repo;
-		repo = new SailRepository(new MemoryStore());
-		repo.initialize();
-
+		Repository repoNative;
+		File dataDirNative = new File(System.getProperty("user.dir") + "/data/native/" + x + "/");
+		
+		repoNative = new SailRepository(new NativeStore(dataDirNative));
+		
+		repoNative.initialize();
+		
 		String namespace = "http://example.org/";
-		ValueFactory f = repo.getValueFactory();
+		ValueFactory fNative = repoNative.getValueFactory();
+
 		
-		try (RepositoryConnection conn = repo.getConnection()) {
+		try (RepositoryConnection connNative = repoNative.getConnection()) {
 			
-			Insert.insertDataValueFactory(conn, namespace, f, x);
+			int repoType = 1;
 			
-			//Thread.sleep(2000);
+			Insert.insertData(connNative, namespace, fNative, x, repoType);
 			
-			Select.selectAllValueFactory(conn, x);
+			Select.selectAll(connNative, x, repoType);
 
-			conn.close();
-			repo.shutDown();
+			connNative.close();
+			repoNative.shutDown();
+		}
+	}
+	
+	public static void setupConnectionMemory(int x) throws IOException, InterruptedException {
+		
+		Repository repoMemory;
+		
+		File dataDirMemory = new File(System.getProperty("user.dir") + "/data/memory/" + x + "/");
+		repoMemory = new SailRepository(new MemoryStore(dataDirMemory));
+		repoMemory.initialize();
+		
+		String namespace = "http://example.org/";
+		ValueFactory fMemory = repoMemory.getValueFactory();
+		
+		try (RepositoryConnection connMemory = repoMemory.getConnection()) {
+			
+			int repoType = 2;
+			
+			Insert.insertData(connMemory, namespace, fMemory, x, repoType);
+			
+			Select.selectAll(connMemory, x, repoType);
 
+			connMemory.close();
+			repoMemory.shutDown();
 		}
 	}
 }
